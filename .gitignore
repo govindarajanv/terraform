@@ -1,0 +1,6 @@
+access.tf
+terraform.tfstate
+*.pem
+*.pri
+*.pub
+*.swp
