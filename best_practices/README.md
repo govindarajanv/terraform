@@ -1,3 +1,5 @@
+courtesy: https://github.com/TerraformDesignPattern
+
 -	Single line comments start with #
 -	Multi-line comments are wrapped with /* and */
 -	Strings can interpolate other values using syntax wrapped in ${}
@@ -10,7 +12,7 @@
 	-	- means deletion of existing resources
 	-	-/+ means deletion and recreation of those resources
 -	focus on staying DRY (Dont repeat yourself), parameterize to stay DRY
--	define variables in variables.tf
+-	define variables in variables.tf, all inputs to the modules should be in variables.tf
 -	specify output variables in outputs.tf file
 -	better to have granular file structure so that you can rename a file with ".disabled" suffix so that it will not get picked up when you dont want a module to be created
 -	Naming convention is RESOURCE NAME = RESOURCE TYPE - PROVIDER NAME 
@@ -30,6 +32,8 @@
 	-		-list=true 	lists files whose formatting is different
 	-		-write=true 	write the results to the source file
 	-		-diff=false	displays the differences
+	-	terraform fmt
+-	Use Kitchen terraform
 -	segregate the modules into
 	-	service
 	-	infrastructure  (infrastructure does not change often)
