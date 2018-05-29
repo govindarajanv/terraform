@@ -12,3 +12,11 @@ resource "docker_container" "container_id" {
     external = "8128"
   }
 }
+#output name and ip address
+output "IP Address" {
+  value = "${docker_container.container_id.ip_address}"
+}
+
+output "Container Name" {
+  value = "${docker_container.container_id.name}"
+}

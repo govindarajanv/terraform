@@ -7,3 +7,6 @@
 -	terraform destroy will destroy the created resources
 -	terraform taint docker_container.container_id will make the resource as tainted
 -	terraform untaint docker_container.container_id will make the resource as tainted
+-	terraform console
+	>docker_container.container_id.name
+	blog
