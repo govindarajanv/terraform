@@ -1,0 +1,9 @@
+-	Install Terraform and docker
+-	Use terraform init on your new terraform directory
+	-	this downloads all dependencies in .terraform directory under the work directory
+-	terrafrom show will show the terraform resource which can be referred for performing interpolation
+-	terraform plan will do mock run
+-	terraform apply will perform actual run
+-	terraform destroy will destroy the created resources
+-	terraform taint docker_container.container_id will make the resource as tainted
+-	terraform untaint docker_container.container_id will make the resource as tainted
