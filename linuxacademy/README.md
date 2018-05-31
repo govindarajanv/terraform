@@ -22,4 +22,5 @@
 	terraform workspace select dev
 	terraform workspace select prod
 	terraform workspace select default
+-	create a file terraform.tfvars file
 
