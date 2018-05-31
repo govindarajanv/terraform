@@ -14,3 +14,12 @@
 	terraform console
 	>lookup(var.ext_port,var.env)
 	80
+-	you cannot deploy two different environments at the same time or immediately one after another as tfstate is a single file and gets overwritten by the following terraform apply. So you should use workspaces
+-	The following command creates new workspaces
+	terraform workspace new dev
+	terraform workspace new prod
+-	The following command switches to new workspaces
+	terraform workspace select dev
+	terraform workspace select prod
+	terraform workspace select default
+
