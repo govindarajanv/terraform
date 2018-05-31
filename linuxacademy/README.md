@@ -10,3 +10,7 @@
 -	terraform console
 	>docker_container.container_id.name
 	blog
+-	when using environments export TF_VAR_env=prod
+	terraform console
+	>lookup(var.ext_port,var.env)
+	80

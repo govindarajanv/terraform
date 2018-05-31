@@ -1,10 +1,21 @@
+variable "env" {
+  description = "env: dev or prod"
+}
 variable "container_name" {
   description = "Name of container"
-  default = "blog"
+  type = "map"
+  default = {
+      dev = "dev_blog"
+      prod = "prod_blog"
+  }
 }
 variable "image" {
   description = "image for container"
-  default = "ghost:latest"
+  type = "map"
+  default = {
+      dev = "ghost:latest"
+      prod = "ghost:alpine"
+  }
 }
 variable "int_port" {
   description = "internal port for container"
@@ -12,5 +23,9 @@ variable "int_port" {
 }
 variable "ext_port" {
   description = "external port for container"
-  default = "8128"
+  type = "map"
+  default = {
+      dev = "8128"
+      prod = "8130"
+  }
 }
