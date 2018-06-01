@@ -23,4 +23,8 @@
 	terraform workspace select prod
 	terraform workspace select default
 -	create a file terraform.tfvars file
-
+-	if you want a variable to be entered via an external file or by entering it interactively, then use variable "variable_name" {} in variables.tf
+-	List is represented by []
+-	To check syntax use 'terraform console' ad 'terraform show'
+-	The best way to mark that resource as needing to be updated is to make that resource as tainted
+-	In order to run a command during deployment use the provisioner 'local-exec'
