@@ -1,5 +1,10 @@
+terraform {
+  required_version = ">= 0.12, < 0.13"
+}
 provider "aws" {
   region = "us-east-1"
+  # Allow any 2.x version of the AWS provider
+  version = "~> 2.0"
 }
 resource "aws_instance" "example" {
   ami           = "ami-04b9e92b5572fa0d1"
@@ -52,13 +57,4 @@ resource "aws_autoscaling_group" "example" {
     value               = "terraform-asg-example"
     propagate_at_launch = true
   }
-}
-variable "server_port" {
-  description = "The port the server will use for HTTP requests"
-  type        = number
-  default     = 8080
-}
-output "public_ip" {
-  value = aws_instance.example.public_ip
-  description = "The public IP address of the web server"
 }
